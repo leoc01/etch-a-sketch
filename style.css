@@ -5,23 +5,24 @@ body {
   align-content: center;
   height: auto;
   /* background by Lea Verou from https://projects.verou.me/css3patterns/ */
-  background-color:rgb(61, 122, 168);
-  background-image: linear-gradient(white 2px, transparent 2px),
-  linear-gradient(90deg, white 2px, transparent 2px),
-  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  background-image: linear-gradient(90deg, transparent 50%, #4a7c4280 50%),
+  linear-gradient(transparent 50%, #4a7c4280 50%);
+    background-size:100px 100px;
 }
 
 #etchBoard {
     display: grid;
     grid-template-rows: 90% 1fr;
+    margin-top: 50px;
     padding: auto auto 0 auto;
     width: 70vh;
     height: 77vh;
     background: #E6641E;
     border-radius: 30px;
+    box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+-webkit-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+-moz-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+    
     /* shadow effect by Andor Nagy from https://webdesignerhut.com/3d-buttons-with-css-dropshadow/ */
     box-shadow: 1px 0px 0px #ad4c17,0px 1px 0px #ad4c17,
     2px 1px 0px #ad4c17,1px 2px 0px #ad4c17,
@@ -31,7 +32,12 @@ body {
     6px 5px 0px #ad4c17,5px 6px 0px #ad4c17,
     7px 6px 0px #ad4c17,6px 7px 0px #ad4c17,
     8px 7px 0px #ad4c17,7px 8px 0px #ad4c17,
-    9px 8px 0px #ad4c17,8px 9px 0px #ad4c17;
+    9px 8px 0px #ad4c17,8px 9px 0px #ad4c17,
+    /* this is by me trying to learn light physics :D */
+    25px 25px 10px 0px rgba(0,0,0,0.60),
+    10px 25px 10px 0px rgba(0,0,0,0.60),
+    25px 10px 10px 0px rgba(0,0,0,0.60);
+    
 }
 
 #blocks {
