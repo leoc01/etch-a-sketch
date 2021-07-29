@@ -78,6 +78,7 @@ button {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .quote-container {
