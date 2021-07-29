@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  /* background by Lea Verou from https://projects.verou.me/css3patterns/ */
+  background-color:rgb(61, 122, 168);
+  background-image: linear-gradient(white 2px, transparent 2px),
+  linear-gradient(90deg, white 2px, transparent 2px),
+  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+#etchBoard {
+    display: grid;
+    grid-template-rows: 90% 1fr;
+    padding: auto auto 0 auto;
+    width: 70vh;
+    height: 77vh;
+    background: #E6641E;
+    border-radius: 30px;
+    /* shadow effect by Andor Nagy from https://webdesignerhut.com/3d-buttons-with-css-dropshadow/ */
+    box-shadow: 1px 0px 0px #ad4c17,0px 1px 0px #ad4c17,
+    2px 1px 0px #ad4c17,1px 2px 0px #ad4c17,
+    3px 2px 0px #ad4c17,2px 3px 0px #ad4c17,
+    4px 3px 0px #ad4c17,3px 4px 0px #ad4c17,
+    5px 4px 0px #ad4c17,4px 5px 0px #ad4c17,
+    6px 5px 0px #ad4c17,5px 6px 0px #ad4c17,
+    7px 6px 0px #ad4c17,6px 7px 0px #ad4c17,
+    8px 7px 0px #ad4c17,7px 8px 0px #ad4c17,
+    9px 8px 0px #ad4c17,8px 9px 0px #ad4c17;
+}
+
+#blocks {
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: grid;
+    grid-gap: 1px;
+    width: 90%;
+    height: 90%;
+    border-radius: 3px;
+    outline: rgb(214, 214, 214) solid 2px;
+    background-color: rgb(214, 214, 214);
+    box-sizing: border-box;
+    
+}
+
+.pixel {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#controls {
+  justify-self: center;
+  align-self: center;
+}
+
+button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
