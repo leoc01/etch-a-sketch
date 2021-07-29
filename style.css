@@ -12,7 +12,7 @@ body {
     background-size:100px 100px;
 }
 
-#etchBoard {
+#etchasketchFrame {
     display: grid;
     grid-template-rows: 90% 1fr;
     margin-top: 50px;
@@ -42,7 +42,7 @@ body {
     
 }
 
-#blocks {
+#whiteCanvas {
     justify-self: center;
     align-self: center;
     padding: 0;
