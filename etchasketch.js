@@ -24,7 +24,7 @@ function createGrid(value) {
 
 function insertPixelInGrid(value) {
     for (let i = 0; i < value; i++) {
-        whiteCanvas.appendChild(createPixel());
+        whiteCanvas.appendChild( createPixel() );
     }
 
     return;
@@ -35,7 +35,7 @@ function createPixel() {
     pixel.className = 'pixel';
     pixel.style.opacity = 1;
     pixel.style.backgroundColor = 'white';
-    pixel.addEventListener("mouseenter", function () {
+    pixel.addEventListener( "mouseenter", function () {
         paintPixel(pixel);
     });
 
@@ -43,7 +43,7 @@ function createPixel() {
 }
 
 function paintPixel(pixel) {
-    if (colorBlack === true) {
+    if ( colorBlack === true ) {
         pixel.style.backgroundColor = 'black';
         pixel.style.opacity = shadesOfGray(pixel);
     } else {
@@ -57,9 +57,9 @@ function paintPixel(pixel) {
 function shadesOfGray(pixel) {
     let pixelOpacity = parseFloat(pixel.style.opacity);
     
-    if (pixelOpacity === 1) {
+    if ( pixelOpacity === 1 ) {
         pixelOpacity = 0.11;
-    } else if (pixelOpacity < 1) {
+    } else if ( pixelOpacity < 1 ) {
         pixelOpacity += 0.225;
     }
 
@@ -96,11 +96,11 @@ function randomRainbow() {
 }
 
 function changeSize(value) {
-    if (value === 64) {
+    if ( value === 64 ) {
         gridSize = resetCanvas(16);
-    } else if (value === 16) {
+    } else if ( value === 16 ) {
         gridSize = resetCanvas(32);
-    } else if (value === 32) {
+    } else if ( value === 32 ) {
         gridSize = resetCanvas(48);
     } else {
         gridSize = resetCanvas(64);
@@ -110,9 +110,9 @@ function changeSize(value) {
 }
 
 function blackOrRainbow() {
-    gridSize = resetCanvas(gridSize);
+    resetCanvas(gridSize);
 
-    if (colorBlack === true) {
+    if ( colorBlack === true ) {
         colorBlack = false;
     } else {
         colorBlack = true;
@@ -124,7 +124,7 @@ function blackOrRainbow() {
 function resetCanvas(value) {
     removeAllChildNodes(whiteCanvas);
     createGrid(value);
-    insertPixelInGrid(value ** 2);
+    insertPixelInGrid( value ** 2 );
 
     return value;
 }
@@ -142,8 +142,12 @@ window.onload = function () {
     insertPixelInGrid(gridSize ** 2);
 };
 
-sizeButton.addEventListener('click', function () { changeSize(gridSize) });
-rainbowButton.addEventListener('click', function () { blackOrRainbow() });
+sizeButton.addEventListener( 'click', function () {
+    changeSize(gridSize)
+});
+rainbowButton.addEventListener( 'click', function () {
+    blackOrRainbow()
+});
 //END OF THE ACTUAL GAME
 
 //download/upload function are working, but I still have to figure out how to work with the uploaded file
@@ -170,11 +174,13 @@ function createFile() {
 
 function uploadFile() {
     document.getElementById('fileid').click();
-    console.log(readAsText( document.getElementById('fileid').files[0] ));
+    console.log( readAsText( document.getElementById('fileid').files[0] ) );
 
     return;
 }
 
-downloadPimba.addEventListener('click', function () { downloadFile() });
-uploadPimba.addEventListener('click', uploadFile);
+downloadPimba.addEventListener( 'click', function () {
+    downloadFile()
+});
+uploadPimba.addEventListener( 'click', uploadFile );
 

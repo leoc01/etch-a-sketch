@@ -8,25 +8,43 @@ body {
   height: auto;
   /* background by Lea Verou from https://projects.verou.me/css3patterns/ */
   background-image: linear-gradient(90deg, transparent 50%, #4a7c4280 50%),
-  linear-gradient(transparent 50%, #4a7c4280 50%);
-    background-size:100px 100px;
+    linear-gradient(transparent 50%, #4a7c4280 50%);
+  background-size:100px 100px;
+}
+
+.postIt {
+  margin-top: 50px;
+  position: relative;
+}
+
+.instructions {
+  background: #eae672;
+  transform: rotate(-4deg);
+  color: #333;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
 }
 
 #etchasketchFrame {
-    display: grid;
-    grid-template-rows: 90% 1fr;
-    margin-top: 50px;
-    padding: auto auto 0 auto;
-    width: 70vh;
-    height: 77vh;
-    background: #E6641E;
-    border-radius: 30px;
-    box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
--webkit-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
--moz-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+  display: grid;
+  grid-template-rows: 90% 1fr;
+  margin-top: 50px;
+  padding: auto auto 0 auto;
+  width: 70vh;
+  height: 77vh;
+  background: #E6641E;
+  border-radius: 30px;
+  box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+  -webkit-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
+  -moz-box-shadow: -19px -12px 24px -7px rgba(0,0,0,0.54);
     
-    /* shadow effect by Andor Nagy from https://webdesignerhut.com/3d-buttons-with-css-dropshadow/ */
-    box-shadow: 1px 0px 0px #ad4c17,0px 1px 0px #ad4c17,
+  /* shadow effect by Andor Nagy from https://webdesignerhut.com/3d-buttons-with-css-dropshadow/ */
+  box-shadow: 1px 0px 0px #ad4c17,0px 1px 0px #ad4c17,
     2px 1px 0px #ad4c17,1px 2px 0px #ad4c17,
     3px 2px 0px #ad4c17,2px 3px 0px #ad4c17,
     4px 3px 0px #ad4c17,3px 4px 0px #ad4c17,
@@ -35,36 +53,35 @@ body {
     7px 6px 0px #ad4c17,6px 7px 0px #ad4c17,
     8px 7px 0px #ad4c17,7px 8px 0px #ad4c17,
     9px 8px 0px #ad4c17,8px 9px 0px #ad4c17,
-    /* this is by me trying to learn light physics :D */
+  /* this is by me trying to learn light physics :D */
     25px 25px 10px 0px rgba(0,0,0,0.60),
     10px 25px 10px 0px rgba(0,0,0,0.60),
     25px 10px 10px 0px rgba(0,0,0,0.60);
-    
 }
 
 #whiteCanvas {
-    justify-self: center;
-    align-self: center;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    display: grid;
-    grid-gap: 1px;
-    width: 90%;
-    height: 90%;
-    border-radius: 3px;
-    outline: rgb(214, 214, 214) solid 2px;
-    background-color: rgb(214, 214, 214);
-    box-sizing: border-box;
-    cursor: pointer;
+  justify-self: center;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-gap: 1px;
+  width: 90%;
+  height: 90%;
+  border-radius: 3px;
+  outline: rgb(214, 214, 214) solid 2px;
+  background-color: rgb(214, 214, 214);
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .pixel {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #controls {
@@ -99,31 +116,4 @@ input[type="file"]{
   background-color: blue;
   color: white;
   cursor: pointer;
-}
-
-.quote-container {
-  margin-top: 50px;
-  position: relative;
-}
-
-.note {
-  color: #333;
-  position: relative;
-  width: 200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: 'Caveat', cursive;
-  font-size: 24px;
-  box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
-}
-
-.note .author {
-  display: block;
-  margin: 40px 0 0 0;
-  text-align: right;
-}
-
-.yellow {
-  background: #eae672;
-  transform: rotate(-4deg);
 }
