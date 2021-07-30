@@ -60,7 +60,7 @@ function shadesOfGray(pixel) {
     if (pixelOpacity === 1) {
         pixelOpacity = 0.11;
     } else if (pixelOpacity < 1) {
-        pixelOpacity += 0.15;
+        pixelOpacity += 0.225;
     }
 
     return `${pixelOpacity}`;
@@ -170,7 +170,7 @@ function createFile() {
 
 function uploadFile() {
     document.getElementById('fileid').click();
-    console.log(document.getElementById('fileid').files[0]);
+    console.log(readAsText( document.getElementById('fileid').files[0] ));
 
     return;
 }
