@@ -14,6 +14,7 @@ function createGrid(value) {
 function createPixel() {
     let pixel = document.createElement('div');
     pixel.className = 'pixel';
+    pixel.style.opacity = '1';
     pixel.addEventListener("mouseenter", function() { 
         paintPixel(pixel);
     });
@@ -58,8 +59,20 @@ function blackOrRainbow(value) {
 function paintPixel(c) {
     if( colorBlack === true ) {
         c.style.background  = 'black';
+
+        let pixelOpacity = parseFloat(c.style.opacity);
+        if( pixelOpacity === 1 ) {
+            pixelOpacity = 0;
+        }
+
+        if (pixelOpacity < 1) {
+            pixelOpacity += 0.21;
+        }
+        
+        c.style.opacity = `${pixelOpacity}`;
     } else {
         c.style.background  = randomRainbow();
+        c.style.opacity = 1;
     }
 }
 
