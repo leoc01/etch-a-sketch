@@ -150,7 +150,7 @@ rainbowButton.addEventListener( 'click', function () {
 });
 //END OF THE ACTUAL GAME
 
-//download/upload function are working, but I still have to figure out how to work with the uploaded file
+//download function are working, but I still have to figure out how to work with the uploaded file
 function downloadFile() {
     let myBlob = new Blob([createFile()], { type: 'text/plain' });
     const blobURL = URL.createObjectURL(myBlob);
